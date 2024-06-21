@@ -1,0 +1,77 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+section
+{
+	height: 100vh;
+	width: 100%;
+	background-color: aqua;
+}
+section>.userform
+{
+	height: 30%;
+	width: 100%;
+	/* background-color: blueviolet;
+	border: 1px solid white; */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+section>.userform>form
+{
+	color: beige;
+}
+section>.userform>form>h1
+{
+	display: flex;
+	justify-content: center;
+	margin-bottom: 10px;
+	color: rgb(47, 4, 200);
+}
+section>.userform>form>input{
+	height: 25px;
+	width: 200px;
+	background-color: black;
+	border: 2px solid black;
+	border-radius: 20px;
+	text-align: center;
+	
+	margin-left: 20px;
+	margin-top: 20px;
+	color: white;
+}
+section>.userform>form>input:focus
+{
+	color: white;
+}
+section>.userform>form>button
+{
+	height: 35px;
+	width: 120px;
+	background-color: brown;
+	border: 2px solid black;
+	border-radius: 25px;
+	margin-left: 20px;
+}
+section>.userform>form>button:hover
+{
+	cursor: pointer;
+}
+section>.user{
+	height: 70%;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+}
+section>.user>table
+{
+	width: 60%;
+	
+	color: black;
+	
+	font-family: 'Times New Roman', Times, serif;
+	text-align: center;
+}

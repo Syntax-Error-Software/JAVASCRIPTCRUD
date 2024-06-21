@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- <link rel="stylesheet" href="./first.css"> -->
+	<title>Document</title>
+	<style>
+		section{
+			height: 300px;
+			width: 300px;
+			border: 2px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		article{
+			height: 200px;
+			width: 200px;
+			border: 2px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		div{
+			height: 100px;
+			width: 100px;
+			border: 2px solid black;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	</style>
+
+</head>
+<body>
+	<!-- <section>
+		<div class="userform">
+			<form action=""> -->
+				
+				<!-- <input type="text" placeholder="Name">
+				<input type="text" placeholder="Salary">
+				<input type="text" placeholder="Company">
+				<button onclick="formHandle()" onmouseover="x()" onmouseout="y()">SUBMIT</button>
+			</form>
+		</div>
+	    <div class="user">
+			<table border="1">
+				<tr>
+					<td>Name</td>
+					<td>Salary</td>
+					<td>Company</td>
+					<td>Action</td>
+				</tr>
+			</table>
+		</div>
+		
+	
+	</section> -->
+	<!-- <h1>WELCOME TO DARK & LIGHT </h1><br>
+	<button onclick="x()">DARK</button> -->
+	<h1>EVENT PROPAGATION</h1>
+	<section>
+		<article>
+			<div>
+
+			</div>
+		</article>
+	</section>
+	<script>
+	// 	let btn=document.querySelector("button")
+    //   function x()
+	//   {
+	// 	if(btn.innerText=="DARK")
+	// 	{
+	// 		document.body.style.backgroundColor="Black"
+	// 		document.body.style.color="white"
+	// 		btn.innerText="LIGHT"
+	// 	}
+	// 	else if(btn.innerText=="LIGHT")
+	// 	{
+	// 		document.body.style.backgroundColor="blue"
+	// 		document.body.style.color="orange"
+	// 		btn.innerText="DARK"
+	// 	}
+	//   }
+
+	// default boolean value that is false.
+	// let section=document.querySelector("section")
+	// let article=document.querySelector("article")
+	// let div=document.querySelector("div")
+	// section.addEventListener("click",()=>{
+	// 	console.log("Section");
+	// 	// event.stopPropagation() // div article section
+	// })
+	// article.addEventListener("click",()=>{
+	// 	console.log("Article");
+	// 	// event.stopPropagation() // div article
+	// })
+	// div.addEventListener("click",()=>{ 
+	// 	console.log("Div");
+	// 	event.stopPropagation()  // div
+	// })
+
+	// for boolean true value
+	let section=document.querySelector("section")
+	let article=document.querySelector("article")
+	let div=document.querySelector("div")
+
+	section.addEventListener("click",()=>{
+		console.log("Section");
+		 //event.stopPropagation() // if you click any of the element it will print only section
+	},true)
+	article.addEventListener("click",()=>{
+		console.log("Article");
+		 //event.stopPropagation() // div->(section & article)
+		                         // article->(section & article)
+								// section->(onlcy section)
+	},true)
+	div.addEventListener("click",()=>{ 
+		console.log("Div");
+		event.stopPropagation()  // div->(section,article and div)
+		                         // article->(section,article)
+								 // section->(section)
+	},true)
+	
+	</script>
+	
+</body>
+</html>
